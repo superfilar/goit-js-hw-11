@@ -1,0 +1,16 @@
+.load-more {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: $font_color_1;
+    background-color: $background_color_2;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}

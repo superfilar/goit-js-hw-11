@@ -1,0 +1,39 @@
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.photo {
+    display: block;
+    @include image-box-size;
+    object-fit: cover;
+
+    &-card {
+            flex-flow: column;
+            flex-wrap: wrap;
+            margin-right: 20px;
+        }
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    width: 340px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    border-bottom: $border_1;
+    border-left: $border_1;
+    border-right: $border_1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: $box-shadow_1;
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+}

@@ -1,2 +1,2 @@
-@import './common';
-@import './example';
+@use "./utils/_variables" as *;
+@import './common', './example', './components/form', './components/gallery', './components/general', './components/loadMoreButton';
