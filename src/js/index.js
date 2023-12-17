@@ -28,10 +28,20 @@ formButton.addEventListener('click', e => {
         Notiflix.Notify.success(
           `Hooray! We found ${foundData.totalHits} images.`
         );
-        loadMoreButton.style.display = 'block';
+        if (foundData.totalHits >= 41) {
+          loadMoreButton.style.display = 'block';
+        } else {
+          Notiflix.Notify.success(
+            `... and you've reached the all of search results.`
+          );
+        }
         gallerySimpleLightbox.refresh();
       }
     });
+  } else {
+    Notiflix.Notify.failure(
+      'Sorry, you need to input some query. Please try again.'
+    );
   }
 });
 
@@ -49,7 +59,13 @@ loadMoreButton.addEventListener('click', () => {
       Notiflix.Notify.success(
         `Hooray! We found ${foundData.totalHits} images.`
       );
-      loadMoreButton.style.display = 'block';
+      if (foundData.hits.length >= 41) {
+        loadMoreButton.style.display = 'block';
+      } else {
+        Notiflix.Notify.success(
+          `We're sorry, but you've reached the end of search results.`
+        );
+      }
     }
   });
 });
