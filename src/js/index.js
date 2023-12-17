@@ -59,7 +59,7 @@ loadMoreButton.addEventListener('click', () => {
       Notiflix.Notify.success(
         `Hooray! We found ${foundData.totalHits} images.`
       );
-      if (foundData.hits.length >= 41) {
+      if (foundData.hits.length >= 40) {
         loadMoreButton.style.display = 'block';
       } else {
         Notiflix.Notify.success(
